@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>明日方舟-Arknights</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/index.01.css" type="text/css">
+    <link rel="stylesheet" href="css/information.css" type="text/css">
+</head>
+
+<body>
+    <!-- 顶部音乐播放器 -->
+    <div class="BGMContent">
+        <audio id="player" src="sounds/PV/1.mp3"></audio>
+        <marquee id="playInfo" data-key="0" scrollamount="3">当前暂无歌曲播放</marquee>
+        <img id="playPause" src="images/play-circle-outline.svg" onclick="playSong()">
+    </div>
+
+    <!-- 导航栏 -->
+    <nav id="nav" data-key="0">
+        <!-- 移动端 -->
+        <div class="navBtn" onclick="navMenuBtn()">
+            <i class="navBtnIcon">
+                <span class="navBtnIconBar"></span>
+                <span class="navBtnIconBar"></span>
+                <span class="navBtnIconBar"></span>
+            </i>
+        </div>
+
+        <!-- 导航栏样式 -->
+        <div class="navContent">
+            <ul class="navMenu">
+                <li class="navMenuItem">
+                    <a href="home.html">
+                        <span class="navItemName">HOME</span>
+                        <span class="navItemTitle">首页</span>
+                    </a>
+                </li>
+                <li class="navMenuItem active">
+                    <a href="information.html">
+                        <span class="navItemName">NEWS</span>
+                        <span class="navItemTitle">情报</span>
+                    </a>
+                </li>
+                <li class="navMenuItem">
+                    <a href="">
+                        <span class="navItemName">STAFF</span>
+                        <span class="navItemTitle">干员</span>
+                    </a>
+                </li>
+                <li class="navMenuItem">
+                    <a href="">
+                        <span class="navItemName">WORLD</span>
+                        <span class="navItemTitle">设定</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 情报页面 -->
+    <div id="newsPage">
+        <div id="newsDisplay">
+            <div id="newsCategory">
+                <ul id="newsCategoryList">
+                    <li class="newsCategoryItem active">最新</li>
+                    <li class="newsCategoryItem">公告</li>
+                    <li class="newsCategoryItem">活动</li>
+                    <li class="newsCategoryItem">新闻</li>
+                </ul>
+            </div>
+            <div id="newsBanner">
+            </div>
+            <div id="newsContainer">
+                <ul id="newsList">
+                    <li class="newsItem">
+                        <span class="newsItemDate">2022-10-31</span>
+                        <span class="newsItemCate">公告</span>
+                        <span class="newsItemTitle">[明日方舟]11月01日10:00版本更新停机维护公告</span>
+                    </li>
+                    <li class="newsItem">
+                        <span class="newsItemDate">2022-10-31</span>
+                        <span class="newsItemCate">公告</span>
+                        <span class="newsItemTitle">[明日方舟]11月01日10:00版本更新停机维护公告</span>
+                    </li>
+                    <li class="newsItem">
+                        <span class="newsItemDate">2022-10-31</span>
+                        <span class="newsItemCate">公告</span>
+                        <span class="newsItemTitle">[明日方舟]11月01日10:00版本更新停机维护公告</span>
+                    </li>
+                    <li class="newsItem">
+                        <span class="newsItemDate">2022-10-31</span>
+                        <span class="newsItemCate">公告</span>
+                        <span class="newsItemTitle">[明日方舟]11月01日10:00版本更新停机维护公告</span>
+                    </li>
+                    <li class="newsItem">
+                        <span class="newsItemDate">2022-10-31</span>
+                        <span class="newsItemCate">公告</span>
+                        <span class="newsItemTitle">[明日方舟]11月01日10:00版本更新停机维护公告</span>
+                    </li>
+                    <li class="newsItem">
+                        <span class="newsItemDate">2022-10-31</span>
+                        <span class="newsItemCate">公告</span>
+                        <span class="newsItemTitle">[明日方舟]11月01日10:00版本更新停机维护公告</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- js -->
+    <script src="js/music.js"></script>
+</body>
+
+</html>

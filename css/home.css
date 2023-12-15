@@ -1,0 +1,170 @@
+#homepage {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding-left: 5.875rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+}
+
+#homepageAmiya {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/amiya.home.png);
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-size: auto 100%;
+
+    opacity: 0.1;
+}
+
+#homepageLogo {
+    top: 3.75rem;
+    left: 4.5rem;
+    position: fixed;
+    width: 11.125rem;
+}
+
+#homepageTitle {
+    left: 4.5rem;
+    position: fixed;
+
+    color: #E3E3E3;
+}
+
+#homepagePVContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+}
+
+.homepagePVList {
+    display: inline-flex;
+    list-style: none;
+}
+
+.homepagePVListItem {
+    display: inline-block;
+    position: relative;
+
+    color: #e3e3e3;
+    font-size: 1.5rem;
+    margin-right: 2.125rem;
+    letter-spacing: -0.06em;
+}
+
+.homepagePVListItem::after {
+    content: "";
+    display: block;
+    width: 0%;
+    border-bottom: 2px solid #06a3da;
+    transition: 300ms;
+}
+
+.homepagePVInfo {
+    display: none;
+    position: absolute;
+
+    color: #E3E3E3;
+}
+
+#homepagePlayer {
+    position: absolute;
+}
+
+input {
+    -webkit-appearance: none;
+}
+
+input:checked+.homepagePVInfo {
+    display: block;
+}
+
+input:checked+.homepagePVInfo+.homepagePVListItem::after {
+    width: 100%;
+}
+
+#playBtn {
+    width: 1.4rem;
+    height: 1.4rem;
+
+    top: 1.4rem;
+    left: 3rem;
+    position: relative;
+
+    z-index: 10;
+
+    opacity: 0.6;
+}
+
+#playBtn:hover {
+    opacity: 1;
+}
+
+#playBtn:active {
+    opacity: 0.8;
+}
+
+@media only screen and (min-width: 429px) {
+    * {
+        transition: 1s;
+    }
+
+    #homepageTitle {
+        width: 40.75rem;
+        height: 5.75rem;
+        top: 7rem;
+
+        font-size: 4.5rem;
+    }
+
+    #homepagePVContainer {
+        top: 23rem;
+    }
+
+    .homepagePVList {
+        width: 30rem;
+    }
+
+    .homepagePVInfo {
+        width: 20rem;
+        top: 1.4rem;
+        left: 18rem;
+    }
+
+    #homepagePlayer {
+        left: 10rem;
+        bottom: 15rem;
+    }
+}
+
+@media only screen and (max-width:428px) {
+    * {
+        transition: 1s;
+    }
+
+    #homepageTitle {
+        top: 6rem;
+
+        font-size: 5rem;
+    }
+
+    #homepagePVContainer {
+        top: 25rem;
+        left: 2rem;
+    }
+
+    .homepagePVInfo {
+        width: 18rem;
+        top: 5rem;
+        left: 4.5rem;
+    }
+
+    #homepagePlayer {
+        left: 5rem;
+        bottom: 10rem;
+    }
+}

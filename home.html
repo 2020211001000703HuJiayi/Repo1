@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>明日方舟-Arknights</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/index.01.css" type="text/css">
+    <link rel="stylesheet" href="css/home.css" type="text/css">
+</head>
+
+<body>
+    <!-- 顶部音乐播放器 -->
+    <div class="BGMContent">
+        <audio id="player" src="sounds/PV/1.mp3"></audio>
+        <marquee id="playInfo" data-key="0" scrollamount="3">当前暂无歌曲播放</marquee>
+        <img id="playPause" src="images/play-circle-outline.svg" onclick="homePagePlaySong()">
+    </div>
+
+    <!-- 导航栏 -->
+    <nav id="nav" data-key="0">
+        <!-- 移动端 -->
+        <div class="navBtn" onclick="navMenuBtn()">
+            <i class="navBtnIcon">
+                <span class="navBtnIconBar"></span>
+                <span class="navBtnIconBar"></span>
+                <span class="navBtnIconBar"></span>
+            </i>
+        </div>
+
+        <!-- 导航栏样式 -->
+        <div class="navContent">
+            <ul class="navMenu">
+                <li class="navMenuItem active">
+                    <a href="home.html">
+                        <span class="navItemName">HOME</span>
+                        <span class="navItemTitle active">首页</span>
+                    </a>
+                </li>
+                <li class="navMenuItem">
+                    <a href="information.html">
+                        <span class="navItemName">NEWS</span>
+                        <span class="navItemTitle">情报</span>
+                    </a>
+                </li>
+                <li class="navMenuItem">
+                    <a href="">
+                        <span class="navItemName">STAFF</span>
+                        <span class="navItemTitle">干员</span>
+                    </a>
+                </li>
+                <li class="navMenuItem">
+                    <a href="">
+                        <span class="navItemName">WORLD</span>
+                        <span class="navItemTitle">设定</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 首页画面 -->
+    <div id="homepageAmiya"></div>
+    <div id="homepage">
+        <h1 id="homepageTitle">RHODES ISLAND</h1>
+        <img id="homepageLogo" src="images/title.png">
+        <div id="homepagePVContainer" style="transform: translateY(0%);">
+            <ul class="homepagePVList">
+                <input type="radio" name="PV" id="checkPV1" checked>
+                <div class="homepagePVInfo">
+                    BGM - MONSTER - STARSET
+                </div>
+                <li class="homepagePVListItem">
+                    <label for="checkPV1">001</label>
+                </li>
+                <input type="radio" name="PV" id="checkPV2">
+                <div class="homepagePVInfo">
+                    BGM - UNTITLED WORLD - ReoNa
+                </div>
+                <li class="homepagePVListItem">
+                    <label for="checkPV2">002</label>
+                </li>
+                <input type="radio" name="PV" id="checkPV3">
+                <div class="homepagePVInfo">
+                    BGM - INFECTED - STARSET
+                </div>
+                <li class="homepagePVListItem">
+                    <label for="checkPV3">003</label>
+                </li>
+            </ul>
+            <img id="playBtn" src="images/playPVBtn.png" onclick="homepagePlayPV()">
+        </div>
+        <audio id="homepagePlayer" src="sounds/PV/1.mp3" controls="controls"></audio>
+    </div>
+
+    <!-- js -->
+    <script src="js/home.js"></script>
+    <script src="js/music.js"></script>
+</body>
+
+</html>
